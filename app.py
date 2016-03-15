@@ -46,6 +46,11 @@ app.add_api('swagger.yaml')
 # uwsgi --http :8080 -w app
 application = app.app
 
+
+def main():
+    app.run(port=8080, server='gevent')
+
+
 if __name__ == '__main__':
     # run our standalone gevent server
-    app.run(port=8080, server='gevent')
+    main()
