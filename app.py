@@ -39,6 +39,11 @@ def delete_pet(pet_id):
         return NoContent, 404
 
 
+def test(data):
+    print(data)
+    return "BLX!"
+
+
 logging.basicConfig(level=logging.INFO)
 app = connexion.App(__name__)
 app.add_api('swagger.yaml')
